@@ -1,0 +1,32 @@
+section {
+    background-color: orange;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    margin: 0 auto;
+
+}
+.eye {
+    background-color: black;
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+    border-radius: 50%;
+    position: relative;
+    top: 25%;
+    left: 18%;
+}
+
+#mouth {
+    background-color: brown;
+    height: 80px;
+    width: 150px;
+    border-radius: 0 0 40% 40%;
+    position: relative;
+    top:170px;
+    left: 125px;
+    /* You could have used absolute and calculated the offset by little maths on body dimension. */
+}
+#eye1 {
+    margin-right: 100px;
+}

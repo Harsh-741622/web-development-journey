@@ -1,0 +1,212 @@
+<h1>Hii, This is a Revision page</h1> This is a heading tag and it can be used till h6
+This is Block element
+
+
+<p>I am going to add all the Tags here</p> This is paragraph tag which is used to write normal text
+This is Block element
+
+<ul>
+    <li>This is unorderd list</li>
+    <li>One</li>
+    <li>Two</li>
+</ul>
+<ol>
+    <li>This is Ordered list</li>
+    <li>This</li>
+    <li>That</li>
+</ol>
+
+<a href="www.google.com">Google</a> This Tag is used to link a link to the text
+This is inline element
+
+<img src="My image.jpg" alt="Photo" height="150px"> This Tag is used to add Image to the page
+This is inline element
+
+<br> This is a Tag used to line break
+
+<b>This is Bold tag</b>
+<i>This is used to make italic text</i>
+<u>This is used to underline text</u>
+
+<!-- This is Comment in HTML-->
+
+<div></div> This is used to group related elements in code of same functionality
+This is Block elemtnt
+or
+<section></section> This is sementic tag and act same as div
+
+<span></span> This also group elemtnts
+This is inline element
+
+<hr> This Tag is used for Horizontal line
+
+a<sup>2</sup> This tag is used for superscript like a(square) or a(cube)
+H<sub>3</sub>O This tag is used for subscsript like H2O
+
+<header></header>
+<main></main>
+<footer></footer>
+This are the tag used to structure a page
+
+<nav></nav> This is navigation tag where we put all the navigation buttons
+Ex:
+<nav>
+    <ul>
+        <li>About us</li>
+        <li>Contact us</li>
+    </ul>
+</nav>
+
+
+<aside></aside> Used when we need to add something that is no directly related to that page but indirectly related
+
+Table in HTML 
+<table border="black">
+    <caption>Food Menu</caption>
+    <thead>
+        <tr>
+            <th rowspan="2">Items</th>
+            <th colspan="2">Price</th>
+        </tr>
+        <tr>
+            <th>INR</th>
+            <th>USD</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Frooti</td>
+            <td>10</td>
+            <td>0.14</td>
+        </tr>
+        <tr>
+            <td>Samosa</td>
+            <td>12</td>
+            <td>0.17</td>
+        </tr>
+        <tr>
+            <td>Chips</td>
+            <td>20</td>
+            <td>0.28</td>
+        </tr>
+    </tbody>
+    <tfoot></tfoot>
+
+</table>
+So, Inside Table tag the main tags used :
+<caption></caption> Tell the Table Tittle
+<tr></tr> for table row
+<th></th> for table header
+<td></td> for data
+colspan="" is used to make a row occupy x column each column is considered 1 unit
+rowspan="" is used to make a column occupy x row each row is considerd 1 unit
+
+
+Forms in HTML
+<form action="/action">
+    <!--action attribute is  used to define what action needs to be performed whena form is submitted or where the data should be sent-->
+    <div>
+        <label for="username">Username : </label>
+        <input type="text" id="username" placeholder="enter username" name="user">
+        <!--type attribute used to assign the type of input and placeholder is just initial text inside the input box-->
+    </div>
+    <div>
+        <label for="password">Password : </label> <!--for attribute should have same as id value inside input-->
+        <input type="password" id="password" placeholder="enter password" name="pass">
+    </div>
+    <button>Submit</button>
+    <!-- <div>
+        <label for="age">Age : </label>
+        <input type="number" id="age" placeholder="enter age">
+    </div>
+    <button type="submit">Submit</button> -->
+    <!-- <button>Hello</button> any button in form submit the data onto the server by default  -->
+    <!-- <button type="button">Hello</button>
+    <button type="reset">reset</button>
+    <br> -->
+    <!-- Button by input element
+    <input type="button" value="Click me">
+    <input type="submit"> -->
+</form>
+<form action="https://www.youtube.com/results">
+    <input type="text" placeholder="search in youtube" name="search_query">
+    <button>search</button>
+    <!-- In the form when we submit the form it send the data to the server/url that we added in the action="". -->
+</form>
+<form action="/server">
+    <input type="checkbox" id="age" name="age">
+    <label for="age">I am 18+</label>
+
+    <!--  When checkbox is ticked then on server it shows name=on and nothing when it is not ticked. -->
+    <div>
+        <label for="apple">apple</label>
+        <input type="radio" name="fruit" id="apple" value="apple">
+        <label for="mango">mango</label>
+        <input type="radio" name="fruit" id="mango" value="mango">
+        <!-- Since name is same in all radio types therefor they are grouped together and only one can pass at a time and 
+        also when we don't give value then in server it send fruit=on but when we put values in each then it shows ex: fruit=mango . -->
+        <label for="banana">banana</label>
+        <input type="radio" name="fruit" id="banana" value="banana">
+
+        <button>submit</button>
+    </div>
+    <div>
+        <select name="proffesion" id="prof">
+            <option>Select one</option>
+            <option value="stu">Student</option> <!-- The value that goes to the server is not text Student but the value we assign to that option like stu -->
+            <option value="dev">Developer</option> 
+            <!-- you can use selected attribute to make preselected one option. -->
+        </select>
+        <button>Submit</button>
+    </div>
+    <div>
+        <label for="vol">Select you volume level: </label>
+        <input type="range" id="vol" min="0" max="100" name="vol" step="10" value="30">
+        <button>Submit</button>
+    </div>
+    <br>
+    <div>
+        <label for="feedback">Please provide your valuable feedback: </label>
+        <textarea id="feedback" name="feedback" placeholder="write your feedback here"></textarea>
+        <!-- You can use the rows and cols attribute to resize the box -->
+        <button>Submit</button>
+    </div>
+</form>
+
+
+
+
+
+
+
+----------------------------------------------------------------------------------
+CSS Styling 
+<!-- 1.Inline Style  -->
+<!-- <h1 style="color:red;">Hello World</h1> -->
+This way we can only style one tag at a time.
+
+<!-- 2. Using Style tag -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        h1{
+            color:red;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <h1>Apna college</h1>
+    <h2>Welcome</h2>
+</body>
+</html> -->
+This style is limited to a file only that is the limitation of this type.
+
+<!-- 3. Using external separate file for css. -->

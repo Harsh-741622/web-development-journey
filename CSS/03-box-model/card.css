@@ -1,0 +1,28 @@
+.card {
+  width: 200px;
+  height: 250px;
+  border: 2px solid black;
+  display: inline-block;
+  /* By default inline-block aligned on the baseline not the top and since image size is 
+    different. so we need to use vertical-align: ; to make both card align from top */
+  vertical-align: top;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px black;
+  transition: 0.5s;
+}
+img {
+  width: 100%;
+  height: 150px;
+  /* I wanted the image to be same allignment that why I needed to define the height also since image size are different:  */
+  object-fit: cover;
+  /* This is used to make the image fit into the dimension we have given. */
+  border-radius: 5px 5px 0 0;
+}
+.desc {
+  padding: 0 2px 0 25%;
+}
+
+.card:hover {
+  box-shadow: 0px 8px 16px rgb(130, 126, 126);
+}

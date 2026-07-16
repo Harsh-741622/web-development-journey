@@ -1,0 +1,20 @@
+/* Inheritence of style  */
+div {
+    background-color: aqua;
+}
+/* form {
+    background-color: red;
+} */
+
+/* buttons and input don't inherit so we explicity make them inherit */
+input {
+    background-color: inherit;
+}
+button {
+    background-color: inherit;
+}
+button:hover {
+    background-color: red;
+}
+
+/* Also some property like width , height , border , etc are not inherited so we explicity do this. */

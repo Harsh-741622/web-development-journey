@@ -1,0 +1,164 @@
+/* selector {            
+           property : value;
+}           */
+
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1,
+h3{
+    color: #f41624;
+}
+#login {
+    background-color: white;
+}
+#signup {
+    background-color: #f41624;
+    color: white;
+}
+.upvote {
+    background-color: green;
+    color: aliceblue;
+}
+.heading1 {
+    color: #1b74e4;
+}
+#searchbtn {
+    color: white;
+    background-color: black;
+}
+.userbtn {
+    background-color: aqua;
+}
+
+/* Desendent selector */
+
+.post a{
+    color: purple;
+    background-color: yellow;
+}
+nav ul li {
+    color: hotpink;
+}
+
+/* Adjacent sibling combinator */
+
+p + h3 {
+    text-decoration: underline;
+}
+.upvote + button {
+    background-color: rgb(109, 109, 248);
+    color: black;
+}
+
+/* child combinator */
+
+/* This combinator apply style to the element just after the parent element e.g div > input so div is parent and input is child 
+which comes just after the div element. This is also it's disadvantage compare to desendent selector which can select element inside a 
+element at any place just it should be inside the main element e.g p a  */
+
+div > input {
+    background-color: darksalmon;
+}
+
+/* Attribute selector  */
+
+input[type="text"] {
+    color: red;
+}
+input[type="password"]{
+    color: green;
+}
+input[type] {
+    background-color: ghostwhite;
+}
+
+/* A different way to apply css inside a main element  */
+#myId p {
+    color: blue;
+}
+div[id="myId"] p {
+    background-color: pink;
+}
+
+/*Apply CSS on Special state of an element.  */
+
+button:hover {
+    background-color : black ; 
+    color: white;
+}
+h3:hover {
+    text-decoration: overline;
+}
+button:active {
+    background-color: pink;
+    color: black;
+}
+p:active {
+    font-weight: bold;
+    color: green;
+}
+input[type="radio"]:checked + label{
+    color: red;
+    font-weight: bold;
+}
+.post:nth-of-type(2n) {
+    background-color: blanchedalmond;
+}
+
+/* Apply CSS on Specific part of an element */
+
+h1::first-letter{
+    color: black;
+}
+p::first-line {
+    color: whitesmoke;
+}
+p::selection{
+    background-color: rgb(255, 209, 139);
+}
+
+/* Cascading Property of stylesheet  */
+
+/* It says the style which comes later will be applied(if the selector is same) */
+h3 {
+    background-color: yellow;
+}
+h3 {
+    background-color: aquamarine;
+}
+/* Selector specificity
+It is an algorithm that calculates the weight 
+that is applied to a given CSS declaration.
+
+1. Id > class,attribute & pseudo-class > elements & pseudo-element 
+2. Having more selector is good than having less selector 
+3. if selector specificity is same then use cascading property.
+4. Inline style have highest priority even more than id but it is not
+   generally not used as much since it fixes the style of any element.
+
+e.g h2 {
+        background-color: yellow;
+       }
+         0    0       1
+        id  class  element
+         selector specificity : 001 = 1 
+
+e.g .myclass:hover {
+                    color:blue ; 
+                   }
+                 0      2            0        
+                id    class,      element & 
+                    pseudo-class   pseudo-element
+                selector specificity : 020 = 20     
+                */
+
+/* !important 
+This is used when something is very important and we don't want 
+to change it at any case.
+e.g  */
+/* h3 {
+    color : blue !important;
+} */
+

@@ -1,0 +1,195 @@
+div {
+  height: 200px; /* this fix the content height  */
+  width: 500px; /* this fix the content width  */
+  background-color: aqua;
+  /* BORDER  */
+  /* border-width: 5px;
+     border-style: solid;
+     border-color: rgb(3, 3, 3); */
+  /* SHORT METHOD :  border: pixel style color ; */
+  border: 5px solid black;
+  /* BORDER COLOR  */
+  /* border-left-color: blue;
+     border-left-style: dashed;
+     border-top: 5px dashed brown; */
+  /* BORDER RADIUS TO MAKE IT ROUNDED
+     IF height and width is same and border-radius:50%; then it form a circle. */
+  border-radius: 20px;
+  /* PADDING(CONTROLLING SPACE BETWEEN CONTENT AND BORDER) */
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  /* SHORT METHOD  */
+  /* padding: 50px;  Same padding in all direction  */
+  /* padding: 25px 10px; Syntax: padding:top&bottom left&right ;  */
+  /* padding: 10px 20px 30px; syntax: padding:top right&left bottom; */
+  /* padding: 0 20px 30px 40px; syntax: padding:top right bottom left  */
+
+  /* MARGIN  */
+  margin-top: 20px;
+  margin-left: 20px;
+  /* SAME SHORT METHOD AS PADDING  */
+}
+h1 {
+  border-width: 2px;
+  border-color: blueviolet;
+  border-style: dotted;
+  display: inline-block; /* used when we need property of block element but behaviour of inline element i.e aquire only desired space. */
+  /* display: none; // this will disappear the element */
+  /*     
+    INLINE ELEMENT */
+  /* for inline element the padding only happen from left & right
+    and we can't change height and weidht of inline element similarly,
+    we can only add margin in left & right only. */
+}
+
+button {
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+#outer1 {
+  background-color: rgb(255, 251, 0);
+  height: 100px;
+  width: 100px;
+  margin: 50px;
+  border: 3px solid brown;
+}
+#inner1 {
+  background-color: rgb(0, 229, 255);
+  height: 50px;
+  width: 50px;
+  border: 5px dashed green;
+  margin-left: 10%;
+  /* When we use relative size then we give size relative to the 
+    parent element like if ther is only h1 inside a body then the 
+    relative size will be according to the body and
+    if there is nested elements like div inside a div so the size of inside 
+    div will be relative to the size of outside div. 
+    Here above as : 
+    you can see the size of left margin of inside div is 40px which is actually 
+    10% of the 400px of the outside div. */
+}
+
+#outer2 {
+  height: 100px;
+  width: 100px;
+  border: 2px solid black;
+  background-color: pink;
+  font-size: 5px;
+}
+
+#inner2 {
+  height: 25px;
+  width: 25px;
+  background-color: cornflowerblue;
+  font-size: 1.5em;
+  padding: 1em;
+  /* When we use em then in case of font-size it is relative to the parent element. 
+    and in case of other property like width , padding etc .. is based on font size of that element itself
+    this is useful when the size changes and in that case we use em which will be relative to the font-size of itself
+    DRAWBACK: SNOWBALLING EFFECT 
+    means if there are more than two nested elements then the 
+    font-size of inside each level will get larger if >1em and it will
+    decreasing if <1em 
+    which we don't intended we just wanted all the inner element inside the outer most element to have same font-size as 
+    the outer most element but in this case the font-size get bigger or smaller
+
+    By default value is 16px on 1em if we don't have font-size fixed.
+    
+    THAT's why we need "rem"
+    which set the font-size of all the level same as the root element i.e the outer most element.
+*/
+}
+
+#alpha_channel {
+  height: 50px;
+  width: 50px;
+  font-size: 10px;
+  background-color: rgba(84, 147, 51, 0.372);
+  /* This is called alpha value which is used to set the opacity of color. range from 0-1. */
+}
+#opacity {
+  height: 50px;
+  width: 50px;
+  background-color: blueviolet;
+  opacity: 0.5;
+  font-size: 10px;
+  /* Opacity values apply on everything inside that element
+        whereas the alpha value only apply opacity on the color of 
+        the page and don't touch the text. But opacity: affect the text also. */
+}
+
+#hover {
+  height: 50px;
+  width: 50px;
+  background-color: greenyellow;
+  margin-top: 10px;
+  margin: 0 auto; /*  short method to move thing in middle  */
+  /* syntax for shorthand transition function:
+  transition:property_name | duration | timing-function | delay
+  e.g.,  */
+  /* transition: margin-top 2s ease-in-out 2s; */
+  /* delay is the time it take to get back to original state after hover. */
+  transition: margin-top 1s ease-in-out 1s;
+}
+#hover:hover {
+  margin-top: 50px;
+}
+
+.transform {
+  height: 50px;
+  width: 200px;
+  text-align: center;
+  background-color: #7aa874;
+  border: 2px solid black;
+  margin: 10px;
+}
+.transform:nth-of-type(2n) {
+  background-color: #f7db6a;
+}
+.transform:nth-of-type(3n) {
+  background-color: #ebb02d;
+}
+#Transform1:hover {
+  transform: rotate(45deg);
+  /* positive degree will rotate clockwise and negative will rotate anticlockwise. */
+}
+#Transform2:hover {
+  transform: scale(0.5, 2);
+  /* scale(x,y) we can also use scaleX() or scaleY() */
+}
+#Transform3:hover {
+  transform:translate(200px,100px);
+  /* We can similarlly use translateX: ; or translateY:; */
+}
+#Transform4:hover {
+  transform: skew(30deg);
+  /* at -90 degree skew the element vanishes. */
+}
+#Transform5 {
+  transform: rotate(30deg) translateX(100px);
+}
+#boxshadow {
+  height: 50px;
+  width: 200px;
+  text-align: center;
+  background-color: #7aa874;
+  border: 2px solid black; 
+  margin: 10px auto;
+  margin-top: 100px;
+  box-shadow: 2px 2px 8px rgb(5, 5, 5);
+  /* syntax: box-shadow: x-axis | y-axis | z-axis | color  */
+}
+#background_image {
+    width: 400px;
+    height: 200px;
+    margin: 10px auto;
+
+    background-image: url("bgimage.jpg");
+    background-size: cover;
+    /* cover | contain | auto  */
+    
+}
+

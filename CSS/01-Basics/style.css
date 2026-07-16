@@ -1,0 +1,24 @@
+h1 {
+  color: rgb(255,255,255); /* rgb color formate for color selection */
+  background-color: #ff0000; /* Hex code for color selection sometime it is written as "fff" which means "ffffff" also "ofo" means "ooffoo" it is just a short represtation. */
+  text-decoration: wavy black underline; /* used to decorate text by line through , underline ,overline , etc .. (Generally used to remove the underline of anchor tag using none attribute in this element.) */
+  line-height: 1.5; /* increase or decrease the space between lines vertically */
+}
+
+h2 {
+  font-weight: normal; /* decide ho bold or bright a text will look */
+
+}
+
+p {
+  text-align: center; /* this element doesn't move complete text to the left,center,right of the document instead it move the text relative to the parent element like here p which is 
+  a block element so it take whole block thus the text move to the extreme right but even when we restrict the width : 50% then we will see even using right our text will be in center 
+  because only half page is allowed to occupy by the width defination. */
+  font-weight: 100;
+  text-decoration: black line-through;
+  letter-spacing: 10px; /* Used for spacing horizontally in a line between text characters.
+  96px = 1 inch
+  therefore px is not used in responsive website  */
+  font-family: fantasy , serif , sans-serif; /* Used to select font style and genrally we give multiple options for backup if one is not supported in a device */
+  
+}

@@ -1,0 +1,111 @@
+/* Position - Static
+the top,right,bottom,left, and z-index properties have no effect.
+This is default value. */
+
+.position_section_static {
+  text-align: center;
+  background-color: #7aa874;
+  border: 2px solid black;
+  margin: 10px;
+}
+.position_section_static > div {
+  height: 100px;
+  width: 100px;
+  background-color: green;
+  text-align: center;
+  border: 3px solid black;
+  margin: 20px;
+  display: inline-block;
+}
+#static {
+  background-color: rgb(229, 229, 61);
+  padding: 5px;
+  position: static;
+  /* Don't change there original position */
+  top: 100px;
+  left: 100px;
+}
+/* 
+Position - Relative 
+the offset is relative to itself based on the values of top , right, bottom, and left. */
+
+.position_section_relative {
+  text-align: center;
+  background-color: #7aa874;
+  border: 2px solid black;
+  margin: 10px;
+}
+.position_section_relative > div {
+  height: 100px;
+  width: 100px;
+  background-color: green;
+  text-align: center;
+  border: 3px solid black;
+  margin: 20px;
+  display: inline-block;
+}
+#relative {
+  background-color: rgb(229, 229, 61);
+  padding: 5px;
+  position: relative;
+  /* This shift the element from it's original position to the shifted location. */
+  top: 20px;
+  left: 100px;
+}
+
+/* Position - Absolute  */
+
+.position_section_absolute {
+  text-align: center;
+  background-color: #7aa874;
+  border: 2px solid black;
+  margin: 10px;
+}
+.position_section_absolute > div {
+  height: 100px;
+  width: 100px;
+  background-color: green;
+  text-align: center;
+  border: 3px solid black;
+  margin: 20px;
+  display: inline-block;
+}
+#absolute {
+  background-color: rgb(229, 229, 61);
+  padding: 5px;
+  position: absolute;
+  /* The position of the element during absolute is relative to the parent element or it's closest positioned ancestor
+  ,if any otherwise it is placed relative to initial containing block. like in this case it's section or You can say body since 
+  both are in same level. */
+  top: 100px;
+  left: 100px;
+  /* Imp:- relative position give space which it took originally before position is relative 
+  but in case of absolute it don't give space to the element that is absolute and place the next element continuously. as you can see in page. */
+}
+
+/* Position - Fixed  */
+
+.position_section_fixed {
+  text-align: center;
+  background-color: #7aa874;
+  border: 2px solid black;
+  margin: 10px;
+}
+.position_section_fixed > div {
+  height: 100px;
+  width: 100px;
+  background-color: green;
+  text-align: center;
+  border: 3px solid black;
+  margin: 20px;
+  display: inline-block;
+}
+#fixed {
+  background-color: rgb(229, 229, 61);
+  padding: 5px;
+  position: fixed;
+  top: 100px;
+  left: 100px;
+  /* Imp:- relative position give space which it took originally before position is relative 
+  but in case of fixed also it don't give space to the element that is absolute and place the next element continuously. as you can see in page. */
+}
