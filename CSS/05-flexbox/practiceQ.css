@@ -1,0 +1,45 @@
+#container div{
+    font-size: 50px;
+    height: 100px;
+    width: 100px;
+    background-color: grey;
+    border: 2px solid black;
+    border-radius: 5px;
+    text-align: center;
+}
+#container {
+    height: 400px;
+    width: 400px;
+    display: flex;
+    border: 3px solid rgb(29, 129, 89);
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: space-around;
+    border-radius: 5px;
+    margin-bottom: 50px;
+}
+
+
+
+#nav {
+    height: 50px;
+    width: 900px;
+    border: 3px solid rgb(29, 129, 89);
+    display: flex;
+    align-content: flex-end;
+    flex-direction: row;
+    border-radius: 5px;
+    background-color: pink;
+}
+#nav div {
+    height: 50px;
+    width: 80px;
+    font-size: 24px;
+    text-align: center;
+    
+    align-content: space-around;
+}
+#logo{
+    padding-right: 10px;
+}
