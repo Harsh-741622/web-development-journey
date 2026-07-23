@@ -14,7 +14,7 @@ the grid inline. */
     
     
     /* grid-template-rows: 50px 50px 50px 50px 50px; */
-    
+
     /* This is used to decide the number space between 
     grid Track. The number of time we give size will form 
     that number of Grid and the left space will be equally divided in 
@@ -64,9 +64,9 @@ the grid inline. */
 
     place-self: start;
 }
-.two {
-    /* grid-row: 1/4; */
-}
+/* .two {
+     grid-row: 1/4; 
+} */
 
 .item {
     width: 100px;
