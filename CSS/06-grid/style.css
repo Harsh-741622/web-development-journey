@@ -1,0 +1,77 @@
+.container {
+    width: 600px;
+    height: 300px;
+    background-color: rgb(240, 136, 45);
+    display: grid; 
+/* There is also property called inline-grid which is used when we want to make the 
+the grid inline. */
+
+    /* Grid Model 
+    > Grid lines : lines which form grid.
+    > Grid cell : It a block inside grid.
+    > Grid track : It is a space between two grid lines. */
+    
+    
+    
+    /* grid-template-rows: 50px 50px 50px 50px 50px; */
+    
+    /* This is used to decide the number space between 
+    grid Track. The number of time we give size will form 
+    that number of Grid and the left space will be equally divided in 
+    left element to form there Grid.
+    E.g grid-templaate-rows: 50px 40px 50px 50px; create 4 grid and divide rest in left element */
+
+
+
+    /* grid-template-columns: 200px 200px 200px; */
+    /* grid-template-columns: auto auto auto auto auto auto; This will distribute space equally every time you write auto.*/
+    /* grid-template-rows: repeat(4,1fr); */
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    /* grid-template-columns: repeat((3,1fr)); */
+    grid-template-columns: repeat(3,1fr);
+
+
+
+    /* row-gap: 10px;
+    column-gap: 10px; */
+    /* grid-gap: 10px 30px ;  */
+     grid-gap: 10px;/* This create equal gap in row and column  */
+    /* This also create gap between items as well. */
+
+
+    justify-items: center;
+    /* This is used to control where our element should be horizontally. */
+
+
+
+    align-items: center;
+    /* For vertically  */
+
+    /* place-items: center;  */
+    /* This is used for vertically and horizonatlly both. */
+}
+.one {
+    /* grid-column-start: 1;
+    grid-column-end: 3; */
+    /* This define the column occupied by an element of grid */
+    /* grid-column: 1/4; */
+    /* grid-column: 1/span 2;  */
+    /* This span is used for column  */
+
+
+
+    justify-self: end;
+
+    place-self: start;
+}
+.two {
+    /* grid-row: 1/4; */
+}
+
+.item {
+    width: 100px;
+    height: 50px;
+    background-color: greenyellow;
+    border: 2px solid black;
+    text-align: center;
+}

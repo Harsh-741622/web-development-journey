@@ -1,0 +1,43 @@
+h1 {
+    background-color: yellow;
+    border: 2px solid black;
+}
+@media (width: 400px) {
+    /* width can be : min-width: ; max-width: ; 
+    where min-width will apply when width is greater than min-width
+    and max-width will apply when width is smaller than the max-width*/
+    h1 {
+        background-color: rebeccapurple;
+        color: white;
+
+        
+    }
+    div {
+        height: 100px;
+        width: 100px;
+        background-color: blue
+    }
+}
+@media (min-width:700px) {
+    h1 {
+        background-color: rgb(99, 147, 27);
+        }   
+}
+@media (max-width: 200px) {
+    h1 {
+        background-color: pink;
+        }
+        
+}
+@media (min-width:200px) and (max-width:300px) {
+    h1 {
+        background-color: magenta;
+        }
+        
+}
+@media (orientation: landscape) {
+    h1 {
+        background-color: aqua;
+    }
+    
+}

@@ -1,0 +1,20 @@
+.box {
+    height: 200px;
+    width: 200px;
+}
+.one {
+    background-color: aqua;
+    position: relative;
+    z-index: 0;
+    /* Don't set z-index: ; when it's position is default or static
+    it only work when it is not static or default. and default value is 1 . */
+}
+.two { 
+    background-color: rgb(183, 56, 56);
+    position: relative;
+    bottom: 50px;
+    z-index: 1;
+}
+.three {
+    background-color: pink;
+}
