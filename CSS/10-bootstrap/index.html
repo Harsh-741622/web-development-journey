@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <!-- CDN - Content delivery network  -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar bg-body-tertiary navbar-expand-lg">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand">Brand Name</a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="#">About us</a>
+                </div>
+
+            </div>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+
+
+        </div>
+
+    </nav>
+    <div class="container">
+        <!-- This class="container" is applying css on this by the help of bootstrap because this container class is one of the class in bootstrap.  -->
+        <!-- There is different type of container which is used to decide how much space a container should occupy. like full screen on any size of screen. -->
+        <h2>Bootstrap Demo</h2>
+        <hr>
+        <div class="card" style="width: 18rem;">
+            <img src="photo.jpg" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Photography</h5>
+                <p class="card-text">It is an art to capture beautify of the world.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi qui debitis facilis. Fugiat adipisci fugit fuga
+            sed perspiciatis commodi quas, aliquam eum magnam esse velit sapiente odio rem, itaque sunt.
+            Voluptatem, reprehenderit veritatis consectetur alias esse eum illum a impedit rerum vitae inventore quia
+            recusandae aut eligendi saepe blanditiis. Reprehenderit quisquam nulla, recusandae illo consequatur quas
+            voluptatum nobis voluptatem velit!
+            Voluptates accusantium eaque quisquam perferendis et dolorem numquam velit rerum rem sunt porro, totam eos,
+            assumenda aliquam omnis similique dolores veniam? Numquam dolorem doloribus iure consectetur assumenda vero
+            quidem vel.
+            Dolorum quas mollitia error tempora praesentium, quibusdam repellat dignissimos quidem, ipsam perspiciatis
+            fugiat porro reiciendis aperiam? Voluptate eos expedita excepturi blanditiis, id quia placeat? Obcaecati
+            dolorum laboriosam itaque sint quia!
+            Incidunt porro in fuga distinctio quidem consequatur itaque. Alias molestias voluptas tenetur ab aliquid,
+            neque consectetur aperiam quidem nihil, similique minima magni? Molestiae maiores dolores vitae, expedita
+            officiis quis facere. Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis reiciendis excepturi
+            laudantium numquam natus? In, saepe! Corporis alias eos delectus quibusdam nemo molestiae possimus,
+            laboriosam, qui sit, dolores nobis laborum!
+        </p>
+        <hr>
+        <button class="btn btn-danger">btn one</button>
+        <button class="btn btn-success" disabled>btn two</button>
+        <button class="btn btn-outline-warning btn-sm">btn three</button>
+        <button class="btn btn-info btn-lg">btn four</button>
+        <a href="google.com" class="btn btn-outline-info">Google me!</a>
+        <!-- So by the use of class we converted the anchor tag into a button with link  -->
+        <hr>
+        <br>
+        <span class="badge bg-secondary">NEW</span>
+        <span class="badge bg-danger">Alert!</span>
+        <br>
+        <h3>Notification <span class="badge bg-primary">New</span></h3>
+        <hr>
+        <button class="btn btn-primary">Followers
+            <span class="badge bg-secondary rounded-pill">100+</span>
+        </button>
+        <hr>
+        <div class="alert alert-danger">Download Failed! Please try again</div>
+        <div class="alert alert-success alert-dismissible">Congratulations! You got 50/50
+            <button class="btn-close" data-bs-dismiss="alert"></button>
+
+        </div>
+        <hr>
+    </div>
+    <div class="container">
+        <div class="btn-group">
+            <button class="btn btn-primary">one</button>
+            <button class="btn btn-outline-success">two</button>
+            <button class="btn btn-warning">three</button>
+        </div>
+
+    </div>
+    <hr>
+    <!-- This is creating Grid but there is fixed 12 grid. -->
+    <div class="container">
+        <div class="row">
+            <div class="col-4 bg-success">one</div>
+            <div class="col-5 bg-primary">two</div>
+            <div class="col-3 bg-success">three</div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-4 bg-success">one</div>
+            <div class="col-md-4 bg-primary">two</div>
+            <div class="col-md-4 bg-success">three</div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-6 col-xl-4 bg-success">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
+                ipsam dolore placeat sit. Dolorem veniam eligendi optio vel dolore! Corrupti officiis velit aliquam eum
+                dolore aperiam harum. Similique, ipsum dignissimos.</div>
+            <div class="col-md-6 col-xl-4 bg-warning">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
+                voluptate quis tempora quos suscipit tempore nam eveniet blanditiis soluta ut corporis necessitatibus
+                labore ducimus reiciendis, eum expedita corrupti ipsam fuga.</div>
+            <div class="col-md-6 col-xl-4 bg-success">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam,
+                reiciendis illum esse blanditiis exercitationem repellendus alias consequuntur hic tempora mollitia
+                tempore, harum a quod odit in voluptatum nesciunt ad quos.</div>
+        </div>
+        <br>
+        <div class="row align-items-end">
+            <div class="col bg-success">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ipsam dolore
+                placeat sit. Dolorem veniam eligendi optio vel dolore! Corrupti officiis velit aliquam eum dolore
+                aperiam harum. Similique, ipsum dignissimos.</div>
+            <div class="col bg-warning">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse voluptate quis
+                tempora quos suscipit tempore nam eveniet blanditiis soluta ut corporis necessitatibus labore ducimus
+                reiciendis, eum expedita corrupti ipsam fuga. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Blanditiis cumque consequatur laborum non unde maxime iure in harum expedita officia culpa doloremque
+                facere alias, quas, praesentium voluptatem quam debitis aspernatur!</div>
+            <div class="col bg-success">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, reiciendis
+                illum esse blanditiis exercitationem repellendus alias consequuntur hic tempora mollitia tempore, harum
+                a quod odit in voluptatum nesciunt ad quos.</div>
+            <div class="col bg-danger align-self-start">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
+                voluptate quis tempora quos suscipit tempore nam eveniet blanditiis soluta ut corporis necessitatibus
+                labore ducimus reiciendis, eum expedita </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container">
+        <h2>Form Demo</h2>
+        <form>
+            <div class="row">
+                <div class="mb-3 col-md-6">
+                    <label class="form-label" for="email">Email</label>
+                    <input type="text" class="form-control" placeholder="Email" id="email">
+                </div>
+                <div class="mb-3 col-md-6">
+                    <label class="form-label" for="password">Password</label>
+                    <input type="password" class="form-control" placeholder="Password" id="password">
+                </div>
+            </div>
+
+
+
+
+
+
+            <label class="form-label" for="address">Address</label>
+            <input type="text" class="form-control-sm" placeholder="Address" id="address">
+        </form>
+    </div>
+    <hr>
+    <div class="mb-3">
+        <select class="form-select">
+            <option selected>Choose one option</option>
+            <option value="1">one</option>
+            <option value="2">two</option>
+            <option value="3">three</option>
+        </select>
+    </div>
+    <div class="normal mb-3">
+        <input type="checkbox" id="agree">
+        <label for="agree">Agree</label>
+    </div>
+    <div class="mb-3 form-check">
+        <input type="checkbox" id="agreebs" class="form-check-input">
+        <label for="agreebs" class="form-check-label">Agree</label>
+    </div>
+    <div class="mb-3 form-check">
+        <input type="radio" id="radio" class="form-check-input">
+        <label for="radio" class="form-check-label">Yes/No</label>
+    </div>
+    <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
+        <label class="form-check-label" for="switchCheckDefault">Default switch checkbox input</label>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
