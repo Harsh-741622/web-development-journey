@@ -22,6 +22,17 @@
   e.g console.log("Hello","World",num,(1+5));
   Output: Hello World 123 6
 
+  10. let n = prompt("write your number") ;
+      n = parseInt(n) ; 
+      for(let i=n ; i<=n*10  ; i+=n) {
+          console.log(i) ; 
+      } 
+      Here we used parseInt(n) to convert the string value of n into  integer. since prompt always take input in string.
+
+  11. num = Math.floor(num/10) ;
+      this is used to convert the floor value into integer: 12.4 -> 12 
+
+
 2. String:
   1. variable_name.length -----> Gives length of string
 
@@ -136,3 +147,14 @@
   4. console.warn("This is a warning message");
 
 
+5. Loops 
+  1. for of loop :
+    syntax :
+    for(element of collection){
+      //do something
+    }
+    let fruits = ["mango","apple","banana","litchi","ornage"];
+    for(fruit of fruits){ 
+      // This go through all the element of fruits  collection and save it into fruit each time.
+      console.log(fruit);
+    } 

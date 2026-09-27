@@ -218,9 +218,79 @@
 // let lastElements = arr.splice(-n) ; 
 // console.log(lastElements) ; 
 
-let string = "ApnaCollge" ; 
-if(string[1].toUpperCase() < string[1]){ // value of big alphabet is always smaller to the small alphabet in JS
-console.log("Is lower case") ; 
-} else {
-console.log("Is upper case") ; // Is lower case
-} 
+// let string = "ApnaCollge" ; 
+// if(string[1].toUpperCase() < string[1]){ // value of big alphabet is always smaller to the small alphabet in JS
+// console.log("Is lower case") ; 
+// } else {
+// console.log("Is upper case") ; // Is lower case
+// } 
+
+
+// For loop : 
+
+// for(let i = 1 ; i<=15 ; i+=2) {
+//     console.log(i) ; 
+// }
+// for(let i = 2 ; i<=10 ; i+=2){
+//     console.log(i);
+// }
+// for(let i = 5 ; i<= 50 ; i+=5) {
+//     console.log(i) ;
+// }
+// let n = prompt("write your number") ;
+// n = parseInt(n) ; 
+// for(let i=n ; i<=n*10  ; i+=n) {
+//     console.log(i) ; 
+// }
+// let favAnime = "One Piece" ; 
+// let userInput = prompt("Guess my favorite anime : ") ; 
+// while((favAnime != userInput) && (userInput != "quit")) {
+//     userInput = prompt("Again! guess my favorite anime : "); 
+// }
+// if(favAnime == userInput) {
+//     console.log("Congratulations! You guessed right") ; 
+// }
+
+// Assignment question :
+// let arr = [1,2,3,4,5,6,2,3] ; 
+// let num = 2  ;
+// for(let i=0 ; i<arr.length ; i++){
+//     if(arr[i] == num){
+//         arr.splice(i,1) ;
+//     }
+// }
+// console.log(arr)
+
+// let num = prompt("Enter the number :"); 
+// num = parseInt(num)  ; 
+// let count = 0 ; 
+// while(num>0){
+//     num = Math.floor(num/10) ;
+//     count = count + 1 ; 
+// }
+// console.log(count);
+
+// let num = parseInt(prompt("Enter the number :"));
+// let sum = 0 ; 
+// while(num>0){
+//     sum = sum + num%10 ; 
+//     num = Math.floor(num/10) ;
+// }
+// console.log(sum) ; 
+
+// let num = parseInt(prompt("Enter the number :"));
+// let fact = 1 ; 
+// while(num>0){
+//     fact = fact * num ; 
+//     num -- ; 
+// }
+// console.log(fact) ; 
+
+// let nums = [3,5,6,2,3,6,8,6,11,14,9,13,15,19,21] ; 
+// let largest = nums[0] ; 
+// for(let i=1 ; i<nums.length ; i++){
+//     if(nums[i] > largest){
+//         largest = nums[i];
+//     }
+// }
+// console.log(largest);
