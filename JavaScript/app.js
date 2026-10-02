@@ -294,3 +294,86 @@
 //     }
 // }
 // console.log(largest);
+
+const student = {
+name: "Harsh",
+age: 21 ,
+marks: 99,
+city:"Gujarat"
+};
+student.city = "Bihar" ; 
+student["age"] = 20 ; 
+student.gender = "male" ; 
+
+
+// // Nested Object :
+// const classInfo = {
+//     harsh: {
+//         grade: "A+",
+//         city: "bihar"
+//     },
+//     raghav: {
+//         grade: "A++",
+//         city: "Vyara"
+
+//     },
+//     meet: {
+//         grade: "A+++",
+//         city: "rajasthan"
+//     }
+
+// };
+
+// const classInfo = [
+//     {
+//         name: "harsh",
+//         grade: "A"
+//     },
+//     {
+//         name: "raghav",
+//         grade: "A++"
+//     },
+//     {
+//         name: "meet",
+//         grade: "A+"
+//     }
+// ];
+
+
+// Genearating Random number from 1 to 10 
+// let num = Math.random() ; 
+// num = num * 10 ; 
+// num = Math.floor(num) ; 
+// num = num + 1 ; // To generate 10 since random() only gives numbes from 0 to 1(exclusive)
+// alert(num);
+
+// OR 
+// let num = Math.floor(Math.random()*10) + 1 ; 
+
+// Practice question : 
+// let n = Math.floor(Math.random()*100) + 1 ; 
+// alert(n) ; 
+
+// let n = Math.floor(Math.random()*5)+1 ;  // For 1 to 5 
+// let n = Math.floor(Math.random()*5)+1 + 20 ;  // For 21 to 25 
+
+
+// Practice Questions : 
+let dice = Math.floor(Math.random()*6) + 1 ;
+console.log("Dice value: "+dice);
+
+let car = {
+    name: "BMW",
+    model: "Z1",
+    color: "White"
+};
+console.log(car.name);
+
+let person = {
+    name: "Harsh",
+    age: 21 ,
+    city: "Bardoli"
+};
+person.city = "New York";
+person.country = "US";
+

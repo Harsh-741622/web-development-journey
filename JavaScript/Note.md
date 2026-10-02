@@ -30,7 +30,10 @@
       Here we used parseInt(n) to convert the string value of n into  integer. since prompt always take input in string.
 
   11. num = Math.floor(num/10) ;
-      this is used to convert the floor value into integer: 12.4 -> 12 
+      this is used to convert the floor value into integer: 12.4 -> 12
+
+
+      
 
 
 2. String:
@@ -158,3 +161,96 @@
       // This go through all the element of fruits  collection and save it into fruit each time.
       console.log(fruit);
     } 
+
+6.  Object Literals : 
+  JS objects literals : used to store keyed collections & complex entities. 
+  property => (key , value)  pair e.g (name , "Harsh") or (age , 21) 
+  SO objects are a collection of properties.
+
+  e.g of Objects literals : 
+  let student = {
+    name: "Harsh" ,
+    age: 21 ,  
+    marks: 95  
+  };
+  To get the values :
+  student["name"]; // 'Harsh'
+  OR 
+  student.name; // 'Harsh' 
+
+  NOTE: 
+        let obj = {
+          1: "a",
+          2: "b",
+          null: "c", // This are not keyword but in object literal JS convert this keys into string internally automatically.
+          true: "d",
+          undefined: "e" 
+        };
+        and 
+        obj[1] ---> Here 1 is not any integer or index it is basically in JS internally getting converted in string.
+
+  * Update/Add value :
+  const student = {
+    name: "Harsh",
+    age: 21 ,
+    marks: 99,
+    city:"Gujarat"
+  };
+  student.city = "Bihar" ; // Update 
+  student["age"] = 20 ; 
+  student.gender = "male" ; // Adding new key-value pair
+
+  * Delete : 
+  delete student.marks;
+  delete student.city ; 
+  
+  * Nested Object :
+  const classInfo = {
+      harsh: {
+          grade: "A+",
+          city: "bihar"
+      },
+      raghav: {
+          grade: "A++",
+          city: "Vyara"
+
+      },
+      meet: {
+          grade: "A+++",
+          city: "rajasthan"
+      }
+
+  };
+  classInfo.harsh.city; // bihar
+  classInfor.meet.city = "bardoli" ; // change the city of meet
+
+  // Array of objects :
+  const classInfo = [
+    {
+        name: "harsh",
+        grade: "A"
+    },
+    {
+        name: "raghav",
+        grade: "A++"
+    },
+    {
+        name: "meet",
+        grade: "A+"
+    }
+  ];
+  classInfo[0].name ; // harsh
+
+7. Math Object :
+  Some important functions :
+  1. Math.PI // It returns the value of PI approx 3.14
+  2. Math.E // It returns the value of eular approx 2.718
+  3. Math.abs(num) // retuns positive number 
+  4. Math.pow(a,b) // returns a to the power b
+  5. Math.floor(num) // round off to the integer which is either equal to num or less than num.e.g: 5.99 = 5 
+  6. Math.ceil(num) // This round off the number into integer to the >=num
+  7. Math.random() // gives any values in 0 to 1(exclusive)
+
+
+  
+
