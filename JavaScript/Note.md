@@ -1,4 +1,9 @@
-# Read the *Imp Example* in app.js :
+# **Assignment Question solutions**
+  ## Assignment 23.JavaScript(part 8) : Line 693 
+
+
+
+# Read the **Imp Example** in app.js :
   ## 1. line 607 
     Running a function for set interval of time.
   ## 2. 
@@ -169,12 +174,9 @@
 
   ## 3.17. nested array/ matrix :
       let nums = [[2,3],[4,5]] ; 
-      
+  
 
-
-
-
-
+            
 
 
 # 4. Pop-Up messages
@@ -212,28 +214,31 @@
   SO objects are a collection of properties.
 
   e.g of Objects literals : 
-  let student = {
+  ```js
+  let student = { // student is an Object
     name: "Harsh" ,
     age: 21 ,  
     marks: 95  
   };
-  To get the values :
+  //To get the values :
   student["name"]; // 'Harsh'
-  OR 
+  //OR 
   student.name; // 'Harsh' 
+  ```
 
   NOTE: 
         let obj = {
           1: "a",
           2: "b",
-          null: "c", // This are not keyword but in object literal JS convert this keys into string internally automatically.
+          null: "c",**// This are not keyword but in object literal JS convert this keys into string internally automatically.**
           true: "d",
           undefined: "e" 
         };
         and 
-        obj[1] ---> Here 1 is not any integer or index it is basically in JS internally getting converted in string.
+        **obj[1] ---> Here 1 is not any integer or index it is basically in JS internally getting converted in string.**
 
   ## Update/Add value :
+  ```js
     const student = {
       name: "Harsh",
       age: 21 ,
@@ -243,7 +248,7 @@
     student.city = "Bihar" ; // Update 
     student["age"] = 20 ; 
     student.gender = "male" ; // Adding new key-value pair
-
+  ```
   ## Delete : 
     delete student.marks;
     delete student.city ; 
@@ -311,13 +316,14 @@
 
   ## 8.2. Scope of Function :  
   ### 8.2.1.  e.g:
+  ```js
     let sum = 54 ; // Global scope 
     function calsum(a,b){
       let sum = a+b ; // function scope 
     }
     calsum(1,3);
     console.log(sum); // Outside the function the sum variable will give error since it's only scope is in the function only.
-
+  ```
     Note : Function scope is more specific so if there is both then function will use function scope instead of global scope.
 
   ### 8.2.2. // Block scope - variable declared inside the {} can't be accessed outside the box
@@ -356,15 +362,18 @@
           // do or return something
         }
   ### 8.3.2. e.g :
+  ```js
         let sum = function(a,b){ // Here sum is variable name not function name so when we use   the variable like this it is called function expression.
 
           return a + b ;
         }
         sum(1,2) ; // calling 
+  ```
 
   ### 8.3.3. 
     This help us to change the value of the function same as we can for variable.
     e.g :
+  ```js
       let hello = function() {
         console.log("hello");
       }
@@ -373,11 +382,13 @@
       }
 
       hello();
+  ```
 
   ## 8.4. High Order Functions : 
     function that does one or both: 
-      - takes one or multiple fucntions as arguments 
+  *takes one or multiple fucntions as arguments*
     e.g :
+  ```js
         function multiGreet(func,n){
           for(let i = 1 ; i<=n ; i++){
             func();
@@ -387,45 +398,48 @@
           console.log("Hello");
         }
         multiGreet(greet,2); // When we use function as an argument don't write greet() it means we executed the function instead use greet only.
-
-  - return a function
+  ```
+  *return a function*
     e.g : 
+```js
         function oddOrEvenFactory(request){
-        if(request == "odd"){
-            return function(n){
-                console.log(!(n%2==0));
-            }
-        } else if(request == "even"){
-            return function(n){
-                console.log(n%2 == 0);
-            }
-        }
-        else {
-            console.log("wrong request");
-            }
+          if(request == "odd"){
+              return function(n){
+                  console.log(!(n%2==0));
+              }
+          } else if(request == "even"){
+              return function(n){
+                  console.log(n%2 == 0);
+              }
+          }
+          else {
+              console.log("wrong request");
+              }
         }
 
         let request = "odd"; 
 
-        let func = oddOrEvenFactory(request);
+        let func = oddOrEvenFactory(request); // This will save the returned function in the func 
 
-        func(5);
+        func(5); // This will let us call the returned function with the value.
+  ```
 
         Here the oddOrEvenFactory(request) function is creating function on basic of user input of value of request
 
   ## 8.5. Methods :
     actions that can be performed on an object. OR Jo function object ke andar defined hote hai unhe methods kehate hai .
       e.g : 
+  ```js
           const calculator = {
             add: function(a,b){
               return a + b ; 
-            }
+            },
             sub: function(a,b){
               return a - b ; 
-            }
+            },
             mul: function(a,b){
               return a * b; 
-            }
+            },
             div: function(a,b){
               return a/b ; 
             }
@@ -444,6 +458,7 @@
               return a*b ; 
             }
           }
+  ```
   ## 8.6. this keyword : line 536
     const student = { 
       name: "Harsh",
@@ -494,17 +509,19 @@
       }
 
     ### 8.8.2 e.g :
+```js
       const sum = (a,b) => {
         console.log(a+b)
       }
       const cube = (n) => {
         console.log(n*n*n)
       }
-
-      // If function is only returning values then we can ignore return in Arrow function also the pranthesis comes in place of curly braces.
+  ```
+  **// If function is only returning values then we can ignore return in Arrow function also the pranthesis comes in place of curly braces.**
       e.g :
+  ```js
       const mul = (a,b) => (a*b);
-
+  ```
   ## 8.9. Set Timeout Function : line 559
     ### Syntax :
       SetTimeout(function,timeout) ; // timeout in milisecond and 1000ms = 1s
@@ -551,10 +568,123 @@
       },2000)
     },
   };
+
+  ## 8.12 Default Parameters :
+  Giving default value to the arguments.
+  ```js 
+  function func(a,b=2){
+    return a + b ; 
+  };
+  sum(5); // 7
+  sum(1,4); // 5 
+  ```
     
 
+# 9. Array Method :
+  ## 9.1. forEach : line 621
+  *arr.forEach(some function defination or name);* 
 
-            
+  ## 9.2 map :
+  *let newArr = arr.map(some function defination or name)*
+  This help to apply something on whole array and save that in new array 
+  ```js 
+  let num = [1,2,3,4] ; 
+  let double  = num.map((el) => { // double is a new array which is [2,4,6,8] 
+    return el*2 ; // If there is no return then the double will store underfined as element 
+  }) ; 
+  ```
+  ## 9.3 filter :
+  *let newArr = arr.filter(some function defination or name)*
+  This help us to remove the elements from an array and create a new array with filtered element based on condition
+
+  ## 9.4 Every :
+  Returns true if every element of array gives true for some function. Else returns false.
+  *arr.every(some function defination or name);*
+
+  ## 9.5 Some : 
+  Returns true if some element of array gives true for some function. Else if none satisfy the function then returns false.
+  *arr.some(some function defination or name);*
+
+  ## 9.6 Reduce : line 662
+  reduce the array to single value 
+  *arr.reduce(reducer function with 2 variables for (accumulator , element));*
+
+  ## 9.7 Spread :
+  Expands an iterable(Like arrays , strings ) into multiple values
+  ```js
+  function func(...args){ // This three dot is called spread operator which is used to pass the array as individual arguments to the function. It will take all the arguments passed to the function and store them in an array called args.
+  console.log(args) // This will print the array of all the arguments passed to the function.
+ } 
+ // OR simply 
+ console.log(..."Hello World") // This will print the string as individual characters. It will print H e l l o   W o r l d
+ ``` 
+  ### 9.7.1 Use of Spread : with Array Literals
+  ```js 
+  let arr = [1,2,3,4,5,6];
+  let newArr = [...arr]; // This will create a new array with the same elements as the original array. This is called spread operator. It will create a shallow copy of the array. If we change the value of any element in the new array then it will not affect the original array.
+  // Therefore doing newArr.push(-5) will not change the value in arr 
+
+  let odd = [1,3,5,7,9];
+  let even = [2,4,6,8,10];
+  let combined = [...odd,...even]; // [1,3,5,7,9,2,4,6,8,10]
+  ```
+  ### 9.7.2 Use of Spread : with Object literals 
+  ```js 
+  const data = {
+  email: "example@example.com",
+  password: "password123"
+  };
+  const dataCopy = {...data, id : 123};  // This will create a new object with the properties of the object data and add a new property id with value 123. The original object data will not be modified.
+
+  let obj1 = {...num}; // This will create a new object with the properties of the array num. The keys of the object will be the index of the array and the values will be the elements of the array.
+  let obj2 = {..."Hello"}; // This will create a new object with the properties of the string "Hello". The keys of the object   will be the index of the string and the values will be the characters of the string.
+  ```
+
+  ## 9.8 Rest :
+  Allows a function to take an indefinite number of arguments and bundle them in an array
+  ```js
+  function min(){
+  console.log(arguments); // Every function has a special object called arguments which is an array-like object that contains all the arguments passed to the function. It is not an array but it can be converted to Rest parameter using spread operator.
+  } ; 
+  function sum(arguments){ 
+    return arguments.reduce((min,el) => (min + el)) ; // This will give error because arguments is not an array but an array-like object. So we need to convert it to an array using spread operator.
+  }
+  function sum(...args){
+    return args.reduce((min,el) => (min + el)) ; // This will give the sum of all the arguments passed to the function. 
+  } 
+
+  ---------- And ---------
+  function sum(msg, ...args){ // When we want to pass seperate arguments to the function and also want to pass an array of arguments then we can use rest parameter. The rest parameter must be the last parameter of the function.
+  console.log(msg);
+  return args.reduce((min,el) => (min + el)) ;
+  }
+  ```
+
+  ## 9.9 Destructuring :
+  ### 9.9.1 Destructuring in Array literals : 
+  Storing values of array into multiple variables. We use [] for destructuring.
+  ```js 
+  let name = ["Harsh","Raghav","Meet","Janvi"] ;
+  let [winner , runnerUp , ...others ] = name ; // This is called destructuring assignment. It will assign the first element of the array to winner and the second element of the array to runnerUp.And rest of the value will be collected in others named array by the help of rest parameter.
+  console.log(winner,runnerUp) ; // "Harsh Raghav"
+  ```
+
+  ### 9.9.1 Destructuring in Object literals : 
+  we use {} this time for Object literals for destructring. 
+  ```js 
+  const student = {
+  name: "Harsh",
+  age: 21,
+  marks: 99,
+  city: "Bardoli",
+  Department: "CSE",
+  course: "B.Tech",
+  Username: "harsh123",
+  password: "abcd"  
+  };
+
+  let { Username: user , password: pass , city : place = "Gujarat" , ...otherInfo } = student ; // Here we are destructuring the student object and renaming the Username and password properties to user and pass respectively. We are also providing a default value for the city property in case it is not present in the student object. The rest of the properties are stored in the otherInfo object.
+  ```
 
 
 

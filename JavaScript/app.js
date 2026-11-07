@@ -619,3 +619,113 @@
 // }
 
 
+// let arr = [1,2,3,4,5,6,7,8,9] ;
+// let print = function(el){
+//   console.log(el);
+// }
+// arr.forEach(print) ; // forEach() is a method which takes a function as an argument and run that function for each element of the array.    
+
+// arr.forEach(function(el){
+//   console.log(el);
+// }) ; 
+
+// arr.forEach(el => console.log(el)) ; 
+
+// let arr = [{name: "Harsh", age: 17}, {name: "Raghav", age: 22}, {name: "Meet", age: 20}] ;
+// arr.forEach(function(student){
+//   console.log(student);
+// }); // This will print the whole object of each student
+// arr.forEach((student) => console.log(student.name)) ; // This will print the name of each student
+
+
+// let newArr = arr.map((student) => {
+//   return student.age + 10 ; 
+// })
+
+
+// let newArr = arr.filter((student) => {
+//   return student.age < 18;
+// }) ; 
+
+
+// let num = [1,2,3,4,5,6,7,8,9] ;
+// let result = num.every((el) => {
+//   return el<4 ; // This will check if every element of the array is less than 4 or not. If yes then it will return true else false. 
+// }) ;
+
+
+// let result = num.some((el) => {
+//   return el<4 ; // This will check if some element of the array is less than 4 or not. If yes then it will return true else false. 
+// }) ;
+
+
+// let result = num.reduce((acc,el) => {
+//   console.log(acc); // This is just to see how the accumulator is changing after each iteration. It will print the value of accumulator after each iteration.
+//   return acc + el ; // This will add all the elements of the array and return the sum. In which acc is the accumulator which will store the sum of the elements till the current element and el is the current element of the array.
+// }) ; // 0 is the initial value of the accumulator. If we don't provide it then the first element of the array will be taken as the initial value of the accumulator. 
+
+// To find the maximum element of the array using reduce() method.
+// let Max = num.reduce((max,el) => {
+//   if(el > max) {
+//     return el ; 
+//   } else {
+//     return max ; 
+//   }
+// }) ; 
+
+
+// Practice Question : 
+// let num = [0,5,45,15,25,10] ; 
+// // To check if every element of the array is divisible by 10 or not. If yes then it will return true else false.
+// let result = num.every((el) => (el%10==0)) ;
+// // To find minimum element of the array using reduce() method.
+// let result1 = num.reduce((min , el) => {
+//   if(el<min){
+//     return el
+//   } else {
+//     return min
+//   }
+// }); 
+// console.log(result);
+// console.log(result1);
+
+
+// Assignment Qs : 23.JavaScript(part 8)
+
+let num = [1,2,3,4,5,6,7,8,9] ;
+
+// To find the square of each element of the array using map() method.
+let newArr1 = num.map((el) => (el*el)) ; 
+let result = newArr1.reduce((sum,el) => (sum+el)) ; 
+let Avg = result / num.length ; 
+console.log(newArr1); 
+console.log(result); 
+console.log(Avg) ; 
+
+// To add 5 to each element of the array using map() method.
+let newArray2 = num.map((el) => (el+5)) ; 
+console.log(newArray2) ; 
+
+// To convert each element of the array to uppercase using map() method.
+let arr = ["Harsh","Raghav","Meet"] ;
+let newArray3 = arr.map((el) => (el.toUpperCase())) ; 
+console.log(newArray3) ; 
+
+// To double arguments and return a new array with the original arguments and the doubled values.
+let newArray4 = function doubleAndReturnArgs(num,...args){
+  let doubleArgs = args.map((el) => (el*2)) ; 
+  let result = [...num, ...doubleArgs] ; 
+  return result ; 
+}
+console.log(newArray4([1,2,3],4,5)) ;
+// OR 
+const doubleAndReturnArgs = (arr, ...args) => [...arr, ...args.map(v => v * 2)];
+doubleAndReturnArgs([1, 2, 3], 4, 5); // [1, 2, 3, 8, 10]
+
+// To merge two objects key-value pairs into new object.
+let obj1 = {name: "Harsh", age: 21} ;
+let obj2 = {city: "Bardoli", country: "India", name: "Raghav"} ; // If both objects have same key then the value of the second object will be taken.
+let newObj = function mergeObjects(Obj1 , Obj2){
+  return {...Obj1 , ...Obj2} ; 
+}
+console.log(newObj(obj1, obj2)); 
