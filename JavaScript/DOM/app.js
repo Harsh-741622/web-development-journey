@@ -70,11 +70,13 @@
 
 
 // Assignment Question 24. Js(part 9) :
+
 // To create input and button and set text of button to "Click me"
 // let btn = document.createElement("button") ; 
 // btn.innerText = "Click me" ; 
 // document.querySelector("body").append(inp)
 // document.querySelector("body").append(btn)
+
 // // To set placeholder of input to "username" and id of button to "btn"
 // inp.placeholder = "username" ; 
 // btn.id = "btn" ; 
@@ -82,12 +84,113 @@
 // let b = document.querySelector("button");
 // let b1 = document.querySelector("#btn") ; 
 // b1.classList.add("background"); 
+
 // // To create h1 and set text of h1 to "DOM Practice" underline and set color of h1 to "purple"
 // let h1 = document.createElement("h1") ; 
 // h1.innerHTML = "<u>DOM Practice</u>"; 
 // h1.style.color = "purple" ; 
 // document.querySelector("body").prepend(h1) ; 
+
 // // To create p tag and set text of p to "Apna College Delta Practice" and set bold to "Delta"
 // let p = document.createElement("p") ; 
 // p.innerHTML = "Apna College <b>Delta</b> Practice"; 
 // document.querySelector("body").prepend(p) ;
+
+
+// DOM Events :
+
+//let btn = document.createElement("button");
+// let btn2 = document.createElement("button");
+//btn.innerText = "Click me";
+// btn2.innerText = "Click me2";
+//document.querySelector("body").prepend(btn);
+// document.querySelector("body").prepend(btn2);
+// btn.onclick = function(){
+//     alert("Button is clicked") ;  
+// }
+
+// function sayHello() {
+//     console.log("Hello!");
+// }
+// function sayName() {
+//     console.log("Apna College");
+// }
+// btn.onclick = sayHello ; // Here don't write sayHello() since that will call the function immediately and assign the return value to the onclick event. We need to assign the function reference to the onclick event. So we need to write sayHello without parentheses.
+
+// If there were multiple buttons :
+// let btns = document.querySelectorAll("button");
+// for(btn of btns){
+//     btn.onclick = function(){
+//         alert("Button is clicked") ;
+//     }
+// }
+
+// btn.onmouseenter = function(){
+//     console.log("Mouse is entered") ;
+// }   
+// for(btn of btns){
+//     btn.addEventListener("click" , sayHello) ; 
+//     btn.addEventListener("click" , sayName) ;
+//     btn.addEventListener("dblclick",function() {
+//         console.log("You double click") ; 
+//     }) ; 
+// }
+// btn.addEventListener("click" , function(){
+//     alert("Button is clicked using addEventListener") ;
+// }) ; // This is the modern way to add event listener to an element. We can add multiple event listeners to an element using addEventListener() method. But we can add only one event listener to an element using onclick property. So always use addEventListener() method to add event listener to an element. 
+
+
+// function changeColor() {
+//     console.dir(this.innerText);
+//     this.style.backgroundColor = "blue";
+// }
+// btn.addEventListener("click",changeColor);
+// btn2.addEventListener("click",changeColor) ; 
+
+
+// btn.addEventListener("click", function(event) {
+//     console.log(event) ; 
+//     console.log("Buttons is clicked") ; 
+// }) ; 
+
+// let input = document.createElement("input") ; 
+// input.placeholder = "UserName" ; 
+// document.querySelector("body").prepend(input) ; 
+
+// input.addEventListener("keyup",function(event){
+//     console.log("key =",event.key) ; 
+//     console.log("code =",event.code) ; 
+//     console.log("Key was pressed");
+// }); 
+
+
+// let form = document.querySelector("form") ; 
+// form.addEventListener("submit",function (event) {
+//     event.preventDefault() ; // This preventDefault setting like once submitted it will prevent opening the url of action by default.
+    
+//     let inp = document.querySelector("form input") ; 
+//     console.dir(inp);
+//     console.log(inp.value);
+// });
+
+
+
+// Assignment 25.JavaScript(part 10) :
+// //Q1.
+// let box = document.querySelector(".box") ; 
+// box.addEventListener("mouseout",function (){
+//     console.log("Mouse is out of the box");
+// });
+// let inp = document.querySelector("form input");
+// inp.addEventListener("keypress",function(){
+//     console.log("Key is pressed");
+// });
+// let body = document.querySelector("body");
+// body.addEventListener("scroll",function(){
+//     console.log("Screen scrolled");
+// }) ;
+// //Q.2
+// btn.onclick = function() {
+//     btn.style.backgroundColor = "green";
+// }
+// //Q3. DONE already.

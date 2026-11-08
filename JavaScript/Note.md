@@ -301,7 +301,7 @@
     4. Math.pow(a,b) // returns a to the power b
     5. Math.floor(num) // round off to the integer which is either equal to num or less than num.e.g: 5.99 = 5 
     6. Math.ceil(num) // This round off the number into integer to the >=num
-    7. Math.random() // gives any values in 0 to 1(exclusive)
+    7. Math.random() // gives any values in 0 to 1(exclusive) : Line 339
 
 
 # 8. Function in JS :
@@ -810,11 +810,70 @@ This is a Two step process :
 
   ## 10.3 DOM Events :
   Events are signals that something has occurred. (user inputs/actions)
-  ### 10.3.1 Inline DOM Events:
-  1. *Onclick=" "*
+  ### 10.3.1 *Onclick* // When an element is clicked
   ```js 
   <button onlclick="console.log("button was clicked"); console.log("apna college");"> Click me </button>
+  //OR
+  function sayHello(){
+       alert("Hello!") ;
+   }
+   btn.onclick = sayHello ; // Here don't write sayHello() since that will call the function immediately and assign the return value to the onclick event. We need to assign the function reference to the onclick event. So we need to write sayHello without parentheses.
+
   ```
+  ### 10.3.2 *onmouseenter* // When the mouse comes near the element.
+  ```js
+  btn.onmouseenter = function(){
+    alert("Mouse is entered") ;
+  }   
+  ```
+  ### 10.3.3 *element.addEventListner(event,callback)* // add multiple events on same element at a time.
+  ```js
+  for(btn of btns){
+    btn.addEventListener("click" , sayHello) ; // This is the modern way to add event listener to an element. We can add multiple event listeners to an element using addEventListener() method. But we can add only one event listener to an element using onclick property. So always use addEventListener() method to add event listener to an element. 
+    btn.addEventListener("click" , sayName) ;
+  } ; 
+  ```
+  **NOTE:** WE can use addEventListner for any element such as p , div , h tags etc 
+  #### this in Event Listners :
+  ```js
+  function changeColor() {
+    console.dir(this.innerText); // This help to handle event and reduce redundancy in code i.e repetition of same code.
+    this.style.backgroundColor = "blue";
+  }
+  btn.addEventListener("click",changeColor); // By the help of this we are able to apply same changes in different elements.
+  btn2.addEventListener("click",changeColor) ; 
+  ```
+
+  ### 10.3.4 Keyboard Events :
+  event -> code // return the code of the particular character
+  event -> key // it shows how the particular character look on screen.
+  ```js 
+  input.addEventListener("keyup",function(event){
+    console.log("key =",event.key) ; 
+    console.log("code =",event.code) ; 
+    console.log("Key was pressed");
+  }); 
+  ```
+
+  ### 10.3.5 Form Events : 
+  ```js 
+  let form = document.querySelector("form") ; 
+  form.addEventListener("submit",function (event) {
+      event.preventDefault() ; // This preventDefault setting like once submitted it will prevent opening the url of action by default.
+      alert("Form submitted");
+      let inp = document.querySelector("form input") ; // form Object also contain the input Object in *form.elements[i]* where i is index order in which all the elements inside form is place.
+      console.dir(inp);
+      console.log(inp.value); // This is how we extract the value after form is submitted. 
+      alert(`Hi! ${user.value}`);
+  });
+**NOTE** : 1. change event is used to track the change in value of element so for input we can get the input.value 
+           2. input event is also used but this tracks all the small changes like clicking a in abc , clicking b ... But arrowkeys, shift i.e NON-CHARACTERKEYS will not be tracked.
+  ```
+
+
+
+
+
 
 
 
