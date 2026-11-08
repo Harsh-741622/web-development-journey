@@ -1,5 +1,6 @@
 # **Assignment Question solutions**
   ## Assignment 23.JavaScript(part 8) : Line 693 
+  ## Assignment 24.JavaScript(part 9) : Line 72 (DOM/app.js) 
 
 
 
@@ -685,6 +686,141 @@
 
   let { Username: user , password: pass , city : place = "Gujarat" , ...otherInfo } = student ; // Here we are destructuring the student object and renaming the Username and password properties to user and pass respectively. We are also providing a default value for the city property in case it is not present in the student object. The rest of the properties are stored in the otherInfo object.
   ```
+
+
+
+
+
+
+# 10 DOM (Document Object Model) 
+The DOM represent a document with logical tree. It allows us to manipulate/change webpage content (HTML elements)
+JavaScript automatically create document Object which store all the details of HTML and CSS.
+*console.dir(Object)* // display the document object with it's all properties in console. Used to view any Object in console.
+This is a Two step process :
+1. Select Elements 
+2. Change/Manipulate 
+
+  ## 10.1 Selecting ELements :
+  *getElemntById* Returns the Element as an Object or null(if Not found)
+  *getElementByClassName* Returns the Element as an HTML Collection or empty collection(if not found) 
+  *getElementByTagName* Returns the Element as an HTML Collection or empty collection(If not found)
+  ### Query Selector :
+  Allows us to used any CSS selector
+  *document.querySelector('p')* Selects first p element 
+  *document.querySelector('#myId)* Selects first element with id = myId 
+  *doucment.querySelector('.myClass')* Selects first element with class = myClass 
+  *document.querySelectorAll('p')* Selects all p elements 
+
+  ## 10.2 Manipulation : 
+  ### 10.2.1 **IMP Tricks & Points** 
+  1. To apply any manipulation on element without of need of remembering the content of the element.
+    ```js
+    let heading = document.querySelector("h1") ;
+    // heading.innerHTML = "<u>Spider Man</u>" ;
+    heading.innerHTML = `<u>${heading.innerText}</u>`; // By the help of `${}` We can directly apply anything on the content without need of remembering the content of the element.
+    ```
+
+
+  ### 10.2.2 Using Properties & Methods :
+  1. innerText 
+    Shows the visible text contained in a node (simple complete visible text)
+  2. textContent 
+    Shows all the full text (hidden things as well) - It shows the actual content written in the file so it also display content with display = "none".
+  3. innerHTML 
+    Shows the full markup (content with all the tags)
+  
+  ### 10.2.3 Attribute Manipulation 
+  *obj.getAttribute(attr)*
+  *obj.setAttribute(attr,val)* 
+  These boths call "Getters & Setters" 
+  E.g:
+    ```js 
+    let img = document.querySelector("img") ;
+    img.getAttribute("id") ; // This will return the value of the attribute of the element. In this case it will return "mainImg" which is the value of id attribute of the img element. 
+    img.setAttribute("id" , "newImg") ; // This will change the value of the attribute of the element. In this case it will change the value of id attribute of the img element to "newImg" due to that the CSS will get reset and Thus always think twice before changing the value of the attribute of the element.   
+    ``` 
+
+  ### 10.2.4 Manipulating Style using style :
+  ```js 
+  let divAnchor = document.querySelectorAll("div a") ; 
+  // for(let i=0 ; i<divAnchor.length ; i++){
+  //     divAnchor[i].style.color = "yellow" ;
+  // }
+  //OR
+  for(link of divAnchor){
+      link.style.color = "purple" ;
+  }
+  ``` 
+  Here the *Obj.style* attribute is an inline styling **NOT THE CSS External Styling*. 
+
+  ### 10.2.5 Manipulating Style using classList :
+  ```js
+  let heading = document.querySelector("h1") ;
+  // heading.classList.add("green") ; // This will add the class "green" to the heading element. If the class is already present then it will not add the class again.
+  // heading.classList.add("underline") ; // This will add the class "underline" to the heading element.
+
+  heading.setAttribute("class" , "green underline") ; // This will set the class attribute of the heading element to "green underline". If the class is already present then it will not add the class again. But if we use setAttribute then it will replace the existing class with the new class. So always use classList.add() method to add a class to an element.   
+  heading.classList.remove("green") ; // This will remove the class "green" from the heading element. If the class is not present then it will not do anything.   
+  heading.classList.contains("underline") ; // This will return true if the class "underline" is present in the heading element. If the class is not present then it will return false.   
+  heading.classList.toggle("green") ; // This will toggle the class "green" in the heading element. If the class is present then it will remove the class. If the class is not present then it will add the class.
+  ```
+  ### 10.2.6 Navigation :
+  ```js
+  let box = document.querySelector('.box'); 
+  box.parentElement ; // body
+  box.childElementCount; // 2
+  box.children; // HTMLCollection(2) [h4, ul]
+  let ul = document.querySelector(".box ul");
+  ul.children; // HTMLCollection(3) [li, li, li]
+  ul.children[1].previousElementSibling; // This select the previous sibling 
+  ul.children[1].nextElementSibling ; // This select the next sibling\
+  ```
+
+  ### 10.2.7 Adding Elements :
+  ```js 
+  let newParagraph = document.createElement("p") ; // This will create a new element of type "p". But it will not be added to the DOM. We need to use appendChild() method to add the element to the DOM.
+  newParagraph.innerText = "Hii! This is a new paragraph." ; // This will set the inner text of the new paragraph element
+  let body = document.querySelector("body") ; // This will select the body element of the page.
+  body.appendChild(newParagraph) ; // This will add the new paragraph element to the body element.
+
+  let btn = document.createElement("button") ; // This will create a new element of type "button". But it will not be added to the DOM. We need to use appendChild() method to add the element to the DOM.
+  btn.innerText = "Click Me!" ; // This will set the inner text of the button element. We can use innerText to set the content of the element. We can also use innerHTML to set the content of the element. But innerText is more powerful than innerHTML because we can use HTML tags in innerText. But we cannot use HTML tags in innerHTML. So always use innerText to set the content of the element. 
+  let box = document.querySelector(".box") ; // This will select the element with class "box" of the page.
+  box.appendChild(btn) ; // This will add the button element to the box element.
+
+  newParagraph.append("This is new text added to the new paragraph.") ; // This will add the text to the new paragraph element. We can use append() method to add the text to the element. We can also use innerText to set the content of the element. But append() method is more powerful than innerText because we can use HTML tags in append() method. But we cannot use HTML tags in innerText. So always use append() method to add the text to the element.  
+  newParagraph.append(btn) ; // This will add the button element to the new paragraph element. We can use append() method to add the element to the element. We can also use appendChild() method to add the element to the element. But append() method is more powerful than appendChild() method because we can add multiple elements at once in append() method. But we cannot add multiple elements at once in appendChild() method. So always use append() method to add the element to the element.
+  newParagraph.prepend("This is new text added before to the new paragraph.") ; // This will add the text to the new paragraph element. We can use prepend() method to add the text to the element. We can also use innerText to set the content of the element. But prepend() method is more powerful than innerText because we can use HTML tags in prepend() method. But we cannot use HTML tags in innerText. So always use prepend() method to add the text to the element.
+
+  let btn2 = document.createElement("button") ; 
+  btn2.innerText = "NEW BUTTON" ; 
+  let p = document.querySelector("p") ;
+  p.insertAdjacentElement("beforebegin" , btn2) ; // This will add the button element before the p element. We can use insertAdjacentElement() method to add the element to the element. We can also use appendChild() method to add the element to the element. But insertAdjacentElement() method is more powerful than appendChild() method because we can add the element at any position in the element. But we cannot add the element at any position in the element using appendChild() method. So always use insertAdjacentElement() method to add the element to the element.    
+  p.insertAdjacentElement("afterbegin" , btn2) ; // This will add the button element after the p element. We can use insertAdjacentElement() method to add the element to the element. We can also use appendChild() method to add the element to the element. But insertAdjacentElement() method is more powerful than appendChild() method because we can add the element at any position in the element. But we cannot add the element at any position in the element using appendChild() method. So always use insertAdjacentElement() method to add the element to the element.  
+  p.insertAdjacentElement("beforeend" , btn2) ; // This will add the button element before the end of the p element. We can use insertAdjacentElement() method to add the element to the element. We can also use appendChild() method to add the element to the element. But insertAdjacentElement() method is more powerful than appendChild() method because we can add the element at any position in the element. But we cannot add the element at any position in the element using appendChild() method. So always use insertAdjacentElement() method to add the element to the element.
+  p.insertAdjacentElement("afterend" , btn2) ; // This will add the button element after the p element. We can use insertAdjacentElement() method to add the element to the element. We can also use appendChild() method to add the element to the element. But insertAdjacentElement() method is more powerful than appendChild() method because we can add the element at any position in the element. But we cannot add the element at any position in the element using appendChild() method. So always use insertAdjacentElement() method to add the element to the element.    
+  ```
+
+  ### 10.2.8 Remove Elements : 
+  ```js 
+  let body = document.querySelector("body") ; 
+  body.removeChild(btn2) ; // This will remove the button element from the body element. We can use removeChild() method to remove the element from the element. We can also use remove() method to remove the element from the element. But removeChild() method is more powerful than remove() method because we can remove the element from the element using removeChild() method. But we cannot remove the element from the element using remove() method. So always use removeChild() method to remove the element from the element.    
+  newParagraph.remove() ; // This will remove the new paragraph element from the body element. We can use remove() method to remove the element from the element. We can also use removeChild() method to remove the element from the element. But remove() method is more powerful than removeChild() method because we can remove the element from the element using remove() method. But we cannot remove the element from the element using removeChild() method. So always use remove() method to remove the element from the element.   
+  ```
+
+  ## 10.3 DOM Events :
+  Events are signals that something has occurred. (user inputs/actions)
+  ### 10.3.1 Inline DOM Events:
+  1. *Onclick=" "*
+  ```js 
+  <button onlclick="console.log("button was clicked"); console.log("apna college");"> Click me </button>
+  ```
+
+
+
+
+
+
 
 
 
