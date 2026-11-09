@@ -729,3 +729,4 @@ let newObj = function mergeObjects(Obj1 , Obj2){
   return {...Obj1 , ...Obj2} ; 
 }
 console.log(newObj(obj1, obj2)); 
+

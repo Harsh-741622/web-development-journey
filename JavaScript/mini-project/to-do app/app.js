@@ -1,30 +1,36 @@
-let todo = [] ; 
-let req = prompt("Enter the task you want to perform : ") ; 
-while(true){
-    if(req == "quit"){
-        console.log("quitting app");
-        break;
-    }
-    if(req == "list"){
-        console.log("-----------------------------");
-        for(let i=0 ; i<todo.length ; i++){
-            console.log(i,todo[i]) ; 
-        }
-        console.log("-----------------------------");
-    }
-    else if(req =="add"){
-        let task = prompt("Enter the task you want to add : ") ; 
-        todo.push(task);
-        console.log("task added") ; 
-    }
-    
-    else if(task == "delete") {
-        let idk = prompt("Enter the task index you want to delete : ") ; 
-        todo.splice(idk,1) ; 
-        console.log("task deleted");
-    }
-    else {
-        console.log("Wrong task input") ; 
-    }
-    req = prompt("Enter the task you want to perform : ") ;
+let btn = document.querySelector("button");
+let inp = document.querySelector("input"); 
+let ul = document.querySelector("ul") ; 
+
+btn.onclick = function() {
+    let task = document.createElement("li") ; 
+    task.innerText = inp.value ; 
+
+    let delBtn = document.createElement("button");
+    delBtn.innerText = "delete" ; 
+    delBtn.classList.add("delete") ;
+
+    task.append(delBtn); 
+    ul.appendChild(task) ; 
+    inp.value = ""; // To reset the input box
 }
+
+// This below code will not delete the new task added since addEventListener only work on existing elements.
+// let delBtns = document.querySelectorAll(".delete");
+// for(delBtn of delBtns){
+//     delBtn.addEventListener("click", function() {
+//         let par = this.parentElement ; 
+//         par.remove() ; 
+        
+//     });
+// }; 
+
+
+// If we want to apply the existing Event Listener to the new elements added dynamically, we can use the Event Delegation by using event bubbling.
+ul.addEventListener("click",function(event){
+    // console.dir(event.target.nodeName); // This is the useful property of event Object to know which is getting clicked. this event.target contain nodeName which tell exactly which element it was which is clicked.
+    if(event.target.nodeName == "BUTTON") {
+        let listItem = event.target.parentElement ; 
+        listItem.remove();
+    }
+});

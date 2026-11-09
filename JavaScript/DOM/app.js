@@ -167,7 +167,7 @@
 // let form = document.querySelector("form") ; 
 // form.addEventListener("submit",function (event) {
 //     event.preventDefault() ; // This preventDefault setting like once submitted it will prevent opening the url of action by default.
-    
+
 //     let inp = document.querySelector("form input") ; 
 //     console.dir(inp);
 //     console.log(inp.value);
@@ -194,3 +194,32 @@
 //     btn.style.backgroundColor = "green";
 // }
 // //Q3. DONE already.
+
+
+
+
+
+
+// Event Bubbling JS :
+let div = document.querySelector("div");
+let ul = document.querySelector("ul");
+let lis = document.querySelectorAll("li");
+
+div.addEventListener("click", function () {
+    console.log("div was clicked");
+});
+
+ul.addEventListener("click", function (event) {
+    event.stopPropagation(); // Therefore this is used to stop the event bubbling.
+    console.log("ul was clicked");
+})
+
+for (li of lis) {
+    li.addEventListener("click", function (event) {
+        event.stopPropagation(); // Therefore this is used to stop the event bubbling.
+        console.log("li was clicked");
+    });
+}
+// You can see when the event of inner element is triggered it also trigger the event of parent element. This is called event bubbling. In event bubbling the event travels from inner element to outer element.
+
+

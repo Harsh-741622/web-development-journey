@@ -1,0 +1,42 @@
+body {
+    text-align: center;
+    margin: 10px
+}
+
+#outerBox {
+    height: 310px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    height: 150px;
+    width: 150px;
+    margin: 20px ;
+    border: 10px solid black;
+    border-radius: 40px;
+}
+
+.yellow {
+    background-color: rgb(246, 156, 77);
+}
+
+.red {
+    background-color: rgb(208, 84, 126);
+}
+
+.green {
+    background-color: rgb(92, 182, 173);
+}
+
+.purple {
+    background-color: rgb(105, 122, 228);
+}
+
+.flash {
+    background-color: white;
+}
+
+.userflash {
+    background-color: green;
+}
