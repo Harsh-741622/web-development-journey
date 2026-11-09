@@ -1,12 +1,11 @@
 body {
     text-align: center;
-    margin: 10px
 }
 
 #outerBox {
-    height: 310px;
     display: flex;
     justify-content: center;
+
 }
 
 .btn {

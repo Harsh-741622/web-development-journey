@@ -827,6 +827,7 @@ This is a Two step process :
   }   
   ```
   ### 10.3.3 *element.addEventListner(event,callback)* // add multiple events on same element at a time.
+  **NOTE** Once an event listener is attached, it remains active until explicitly removed using removeEventListener(). Changing a variable or condition does not automatically deactivate it.
   ```js
   for(btn of btns){
     btn.addEventListener("click" , sayHello) ; // This is the modern way to add event listener to an element. We can add multiple event listeners to an element using addEventListener() method. But we can add only one event listener to an element using onclick property. So always use addEventListener() method to add event listener to an element. 
